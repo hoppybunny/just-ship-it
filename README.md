@@ -108,10 +108,10 @@ For optional features configuration (Redis, SearXNG, etc.), see [CONFIGURATION.m
 
 ### 4. Run app locally
 
-#### Using Bun
+#### Using pnpm
 
 ```bash
-bun dev
+pnpm install
 ```
 
 #### Using Docker
@@ -130,45 +130,6 @@ Host your own live version of Morphic with Vercel or Cloudflare Pages.
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fmiurla%2Fmorphic&env=OPENAI_API_KEY,TAVILY_API_KEY,UPSTASH_REDIS_REST_URL,UPSTASH_REDIS_REST_TOKEN)
 
-## 🔎 Search Engine
-
-### Setting up the Search Engine in Your Browser
-
-If you want to use Morphic as a search engine in your browser, follow these steps:
-
-1. Open your browser settings.
-2. Navigate to the search engine settings section.
-3. Select "Manage search engines and site search".
-4. Under "Site search", click on "Add".
-5. Fill in the fields as follows:
-   - **Search engine**: Morphic
-   - **Shortcut**: morphic
-   - **URL with %s in place of query**: `https://morphic.sh/search?q=%s`
-6. Click "Add" to save the new search engine.
-7. Find "Morphic" in the list of site search, click on the three dots next to it, and select "Make default".
-
-This will allow you to use Morphic as your default search engine in the browser.
-
-## ✅ Verified models
-
-### List of models applicable to all
-
-- OpenAI
-  - gpt-4o
-  - gpt-4o-mini
-  - gpt-4-turbo
-  - gpt-3.5-turbo
-- Google
-  - Gemini 1.5 Pro (Unstable)
-  - Gemini 2.0 Flash (Experimental)
-- Anthropic
-  - Claude 3.5 Sonnet
-- Ollama
-  - qwen2.5
-- Groq
-  - llama3-groq-8b-8192-tool-use-preview
-  - llama3-groq-70b-8192-tool-use-preview
-
 ## ⚡ AI SDK Implementation
 
 ### Current Version: AI SDK UI
@@ -182,22 +143,3 @@ The React Server Components (RSC) implementation of AI SDK was used in versions 
 > Note: v0.2.34 was the final version using RSC implementation before migrating to AI SDK UI.
 
 For more information about choosing between AI SDK UI and RSC, see the [official documentation](https://sdk.vercel.ai/docs/getting-started/navigating-the-library#when-to-use-ai-sdk-rsc).
-
-## 📦 Open Source vs Cloud Offering
-
-Morphic is open source software available under the Apache-2.0 license.
-
-To maintain sustainable development and provide cloud-ready features, we offer a hosted version of Morphic alongside our open-source offering. The cloud solution makes Morphic accessible to non-technical users and provides additional features while keeping the core functionality open and available for developers.
-
-For our cloud service, visit [morphic.sh](https://morphic.sh).
-
-## 👥 Contributing
-
-We welcome contributions to Morphic! Whether it's bug reports, feature requests, or pull requests, all contributions are appreciated.
-
-Please see our [Contributing Guide](CONTRIBUTING.md) for details on:
-
-- How to submit issues
-- How to submit pull requests
-- Commit message conventions
-- Development setup
