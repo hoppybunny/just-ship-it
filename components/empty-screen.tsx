@@ -1,22 +1,15 @@
-import { Button } from '@/components/ui/button'
 import { ArrowRight } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
 
 const exampleMessages = [
   {
-    heading: 'What is OpenAI o1?',
-    message: 'What is OpenAI o1?'
+    heading: '1550 PR-25, San Juan, 00908, Puerto Rico',
+    message: '1550 PR-25, San Juan, 00908, Puerto Rico'
   },
   {
     heading: 'Why is Nvidia growing rapidly?',
     message: 'Why is Nvidia growing rapidly?'
-  },
-  {
-    heading: 'Tesla vs Rivian',
-    message: 'Tesla vs Rivian'
-  },
-  {
-    heading: 'Summary: https://arxiv.org/pdf/2407.16833',
-    message: 'Summary: https://arxiv.org/pdf/2407.16833'
   }
 ]
 export function EmptyScreen({

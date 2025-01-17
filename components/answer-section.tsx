@@ -1,6 +1,7 @@
 'use client'
 
 import { Text } from 'lucide-react'
+
 import { ChatShare } from './chat-share'
 import { CollapsibleMessage } from './collapsible-message'
 import { DefaultSkeleton } from './default-skeleton'
@@ -24,7 +25,7 @@ export function AnswerSection({
   const header = (
     <div className="flex items-center gap-1">
       <Text size={16} />
-      <div>Answer</div>
+      <div>Actionable insights</div>
     </div>
   )
   const message = content ? (

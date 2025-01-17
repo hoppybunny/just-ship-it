@@ -1,8 +1,8 @@
 import { Message } from 'ai'
-import { UserMessage } from './user-message'
-import { ToolSection } from './tool-section'
+
 import { AnswerSection } from './answer-section'
 import RelatedQuestions from './related-questions'
+import { UserMessage } from './user-message'
 
 interface RenderMessageProps {
   message: Message
@@ -25,29 +25,16 @@ export function RenderMessage({
     return <UserMessage message={message.content} />
   }
 
-  if (message.toolInvocations?.length) {
-    return (
-      <>
-        {message.toolInvocations.map(tool => (
-          <ToolSection
-            key={tool.toolCallId}
-            tool={tool}
-            isOpen={getIsOpen(messageId)}
-            onOpenChange={open => onOpenChange(messageId, open)}
-          />
-        ))}
-      </>
-    )
-  }
-
   return (
     <>
-      <AnswerSection
-        content={message.content}
-        isOpen={getIsOpen(messageId)}
-        onOpenChange={open => onOpenChange(messageId, open)}
-        chatId={chatId}
-      />
+      {message.content && (
+        <AnswerSection
+          content={message.content}
+          isOpen={getIsOpen(messageId)}
+          onOpenChange={open => onOpenChange(messageId, open)}
+          chatId={chatId}
+        />
+      )}
       {!message.toolInvocations && message.annotations && (
         <RelatedQuestions
           annotations={message.annotations}

@@ -1,11 +1,13 @@
+import type { Metadata, Viewport } from 'next'
+import { Inter as FontSans } from 'next/font/google'
+
 import Footer from '@/components/footer'
 import Header from '@/components/header'
 import { Sidebar } from '@/components/sidebar'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/sonner'
 import { cn } from '@/lib/utils'
-import type { Metadata, Viewport } from 'next'
-import { Inter as FontSans } from 'next/font/google'
+
 import './globals.css'
 
 const fontSans = FontSans({
@@ -13,7 +15,7 @@ const fontSans = FontSans({
   variable: '--font-sans'
 })
 
-const title = 'Morphic'
+const title = 'Just Ship It'
 const description =
   'A fully open-source AI-powered answer engine with a generative UI.'
 

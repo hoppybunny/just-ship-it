@@ -1,13 +1,14 @@
 'use client'
 
-import { cn } from '@/lib/utils'
 import { Message } from 'ai'
 import { ArrowUp, Plus, Square } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import Textarea from 'react-textarea-autosize'
+
+import { cn } from '@/lib/utils'
+
 import { EmptyScreen } from './empty-screen'
-import { ModelSelector } from './model-selector'
 import { Button } from './ui/button'
 
 interface ChatPanelProps {
@@ -95,7 +96,6 @@ export function ChatPanel({
               <Plus className="size-4 group-hover:rotate-90 transition-all" />
             </Button>
           )}
-          {messages.length === 0 && <ModelSelector />}
           <Textarea
             ref={inputRef}
             name="input"
@@ -104,7 +104,7 @@ export function ChatPanel({
             tabIndex={0}
             onCompositionStart={handleCompositionStart}
             onCompositionEnd={handleCompositionEnd}
-            placeholder="Ask a question..."
+            placeholder="Input an address..."
             spellCheck={false}
             value={input}
             className="resize-none w-full min-h-12 rounded-fill bg-muted border border-input pl-4 pr-10 pt-3 pb-1 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
