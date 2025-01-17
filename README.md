@@ -1,8 +1,6 @@
-# Morphic
+# Just Ship It
 
-An AI-powered search engine with a generative UI.
-
-![capture](/public/screenshot-2025-01-15.png)
+An AI-powered search engine that generates real estate market reports
 
 ## 🗂️ Overview
 
@@ -30,16 +28,6 @@ An AI-powered search engine with a generative UI.
 - Chat history functionality (Optional)
 - Share search results (Optional)
 - Redis support (Local/Upstash)
-
-### AI Providers
-
-- OpenAI (Default)
-- Google Generative AI
-- Azure OpenAI
-- Anthropic
-- Ollama
-- Groq
-- OpenAI Compatible
 
 ### Search Capabilities
 
